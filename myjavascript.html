@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript</title>
+       
+    </head>
+    <body>
+
+         <script>
+           let a = window.location.href;
+           console.log("welcome to my current browser "+a);
+
+           let b = window.navigator.userAgent;
+           console.log("Navigator Agent"+ b);
+
+           let c = window.screenX;
+           console.log("screen X "+ c);
+
+           //alert("hello im mazhar");
+           console.log("hi read me");
+
+           let msg = confirm("are you sure you want to continue");
+           console.log("Confirm message" + msg);
+            if(msg == true){
+                alert("welcome to my page");
+            }else{
+                window.location.href="https://www.saqtechnology.com";
+            }
+
+           setTimeout(print,5000);
+
+           setTimeout(yaseen,10000);
+
+           function yaseen(){
+            alert("Hello im yaseen to call function from setTimeout");
+           }
+
+           function yaseen2(){
+            alert("hello im setInterval");
+           }
+
+          // setInterval(yaseen2, 12000)
+
+          // scrollTo(400,1200);
+          open("https://www.saqtechnology.com","saq","width=700,height=700");
+           function showInfo() {
+               
+                console.log("screenX:", window.screenX);
+                console.log("screenY:", window.screenY);
+            }
+
+            
+        </script>
+
+        <button onclick="showInfo()">Show Info</button>
+
+
+    </body>
+</html>

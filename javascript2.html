@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello Mazhar</title>
+    </head>
+    <body>
+        <h1>Welcome Javascript document</h1>
+        <img src="../../hackerAlgo.png" height="50px" width="50px">
+
+        <p id="ab">Hello im a first paragrpah</p>
+        <p name="cc">paragraph1</p>
+        <p name="cc">paragraph3</p>
+        <p name="cc">paragraph2</p>
+        <p name="cc">paragraph4</p>
+        <p name="cc">paragraph5</p>
+
+        <p class="abc">Hello 1</p>
+        <p class="abc">Hello 2</p>
+        <p class="abc">Hello 3</p>
+
+        <button id="mybtn">Change the Paragraph</button>
+
+        <script>
+            document.getElementById("mybtn").addEventListener("click",fun1);
+           function fun1(){
+            document.getElementById("ab").innerHTML = "Paragraph chnaged successfully";
+           }
+
+           let a = document.getElementsByName("cc");
+           for(let i=0;i<a.length;i++){
+            console.log(a[i].textContent);
+           }
+           console.log(a);
+
+          let c = document.querySelectorAll(".abc"); 
+          console.log(c)
+        </script>
+    </body>
+</html>

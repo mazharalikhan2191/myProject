@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div id="div1">
+
+             <input id="myInput" type="text">
+            <button id="btn1">+</button>
+
+            <button onclick="demo()">Click</button><br>
+
+        </div>
+       
+
+        <script>
+        
+            let a = document.getElementById("btn1");
+            let b = document.getElementById("myInput");
+            a.addEventListener("click",fun2);
+            let i=0;
+            function fun2(){
+                if(i <= 5){
+                     b.setAttribute("placeholder","please enter paragraph1");
+                let n = document.createElement("input"); 
+                
+                n.setAttribute("type","text");  
+                n.setAttribute("id","myId"+i);
+                n.setAttribute("placeholder","please enter paragraph"+ i++);
+                document.getElementById("div1").appendChild(n);
+                }
+                else{
+                    a.style.display="none";
+                }
+               
+                
+
+            }
+
+        function demo() {
+            var e = document.getElementById("myInput");
+
+            e.setAttribute("value", "Hello");
+
+            console.log(e.getAttribute("value"));
+
+            for (var i = 0; i < e.attributes.length; i++) {
+                console.log(
+                    e.attributes[i].name +
+                    "=" +
+                    e.attributes[i].value
+                );
+            }
+
+            e.removeAttribute("value");
+        }
+        </script>
+    </body>
+</html>
